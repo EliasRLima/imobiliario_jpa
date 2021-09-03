@@ -1,4 +1,4 @@
-package services;
+package util;
 
 import java.io.IOException;
 
@@ -12,12 +12,12 @@ import javafx.stage.Stage;
  * com outros controllers e encapsular a logica de resize do stage (maximizar, minimizar...)
  */
 
-public final class InicioService {
+public final class InicioUtil {
 
-  private static InicioService instancia; // singleton | instanca unica
+  private static InicioUtil instancia; // singleton | instanca unica
   private Stage janela; // janela principal
 
-  private InicioService(Stage janela) {
+  private InicioUtil(Stage janela) {
     this.janela = janela;
   }
 
@@ -27,8 +27,8 @@ public final class InicioService {
    * @param janela - principal stage da aplicação
    * @return - instancia criada da classe
    */
-  public static InicioService iniciarClasse(Stage janela) {
-    instancia = new InicioService(janela);
+  public static InicioUtil iniciarClasse(Stage janela) {
+    instancia = new InicioUtil(janela);
     return instancia;
   }
 
@@ -37,7 +37,7 @@ public final class InicioService {
    * @return - a instancia unica da classe
    * @throws Exception
    */
-  public static InicioService getInstancia() throws Exception {
+  public static InicioUtil getInstancia() throws Exception {
     if (instancia == null)
       throw new Exception("Instancia da classe InicialService não foi criada!");
     return instancia;

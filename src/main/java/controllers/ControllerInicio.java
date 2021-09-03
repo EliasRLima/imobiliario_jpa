@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
-import services.InicioService;
+import util.InicioUtil;
 
 public class ControllerInicio implements Initializable{
 	
@@ -29,11 +29,11 @@ public class ControllerInicio implements Initializable{
 	@FXML
 	AnchorPane ap_base;
 	
-	private InicioService inicioService;
+	private InicioUtil inicioService;
 	
 	public ControllerInicio() throws Exception {
 		// TODO Auto-generated constructor stub
-		this.inicioService = InicioService.getInstancia();
+		this.inicioService = InicioUtil.getInstancia();
 	}
 	
 	@Override

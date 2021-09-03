@@ -1,13 +1,13 @@
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import services.InicioService;
+import util.InicioUtil;
 
 public class Inicio extends Application{
 	@Override
 	public void start(Stage stage) throws Exception {
-		InicioService.iniciarClasse(stage);
-		InicioService is = InicioService.getInstancia();
+		InicioUtil.iniciarClasse(stage);
+		InicioUtil is = InicioUtil.getInstancia();
 		is.inicial();
 	}
 

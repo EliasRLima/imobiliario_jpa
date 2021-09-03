@@ -22,7 +22,7 @@
         <Menu mnemonicParsing="false" text="Imovel">
           <items>
             <MenuItem fx:id="mn_imovel_new" mnemonicParsing="false" text="Novo" />
-            <MenuItem fx:id="mn_imovel_atualizar" mnemonicParsing="false" text="Atualizar" />z
+            <MenuItem fx:id="mn_imovel_atualizar" mnemonicParsing="false" text="Atualizar" />
             <SeparatorMenuItem mnemonicParsing="false" />
                   <Menu mnemonicParsing="false" text="Listar">
                     <items>
