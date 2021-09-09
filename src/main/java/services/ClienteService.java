@@ -26,8 +26,32 @@ public class ClienteService {
 	            simpleEntityManager.rollBack();
 	        }
 	    }
+	    
+	    public void remove(Cliente cliente) {
+	    	try {
+				simpleEntityManager.beginTransaction();
+				cliente.validate();
+	            dao.delete(cliente);
+	            simpleEntityManager.commit();
+			} catch (Exception e) {
+				e.printStackTrace();
+	            simpleEntityManager.rollBack();
+			}
+	    }
 	     
 	    public List<Cliente> findAll(){
 	        return dao.findAll();
+	    }
+	    
+	    public void update(Cliente cliente) {
+	    	try {
+				simpleEntityManager.beginTransaction();
+				cliente.validate();
+	            dao.update(cliente);
+	            simpleEntityManager.commit();
+			} catch (Exception e) {
+				e.printStackTrace();
+	            simpleEntityManager.rollBack();
+			}
 	    }
 }

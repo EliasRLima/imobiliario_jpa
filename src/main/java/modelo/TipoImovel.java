@@ -17,6 +17,12 @@ public class TipoImovel {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public TipoImovel(Integer id, String descricao) {
+		super();
+		this.id = id;
+		this.descricao = descricao;
+	}
+
 	public void validate() {
 		if(id == null) {
 			throw new IllegalArgumentException("Numero de identificacao nao deve ser null.");

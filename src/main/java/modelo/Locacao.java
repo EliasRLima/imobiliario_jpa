@@ -24,6 +24,24 @@ public class Locacao {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	
+	public Locacao(Integer id, Integer ativo, String dataInicio, String dataFim, Integer diaVencimento,
+			Double valorAluguel, String obs, Imovel imovel, Cliente inquilino) {
+		super();
+		this.id = id;
+		this.ativo = ativo;
+		this.dataInicio = dataInicio;
+		this.dataFim = dataFim;
+		this.diaVencimento = diaVencimento;
+		this.valorAluguel = valorAluguel;
+		this.obs = obs;
+		this.imovel = imovel;
+		this.inquilino = inquilino;
+	}
+
+
+
 	public void validate() {
 		if(dataInicio == null) {
 			throw new IllegalArgumentException("Data de inicio nao pode ser vazia.");

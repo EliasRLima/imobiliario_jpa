@@ -6,11 +6,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "COSTUMER")
+@Table(name = "CLIENTE")
 public class Cliente {
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	private String nome_cliente;
 	private String cpf;
 	private String telefone1;
